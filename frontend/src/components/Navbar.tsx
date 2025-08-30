@@ -122,7 +122,7 @@ const Navbar = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/blog/products/list?lang=${language.toLowerCase()}`);
+      const response = await fetch(`https://api.techsin.com.tr/api/blog/products/list?lang=${language.toLowerCase()}`);
       const data = await response.json();
       setProducts(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -133,7 +133,7 @@ const Navbar = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await fetch(`http://localhost:4000/api/blog/services/list?lang=${language.toLowerCase()}`);
+      const response = await fetch(`https://api.techsin.com.tr/api/blog/services/list?lang=${language.toLowerCase()}`);
       const data = await response.json();
       setServices(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -201,7 +201,7 @@ const Navbar = () => {
   );
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/company")
+    fetch("https://api.techsin.com.tr/api/company")
       .then((res) => res.json())
       .then((data) => setLogo(data))
       .catch((err) => console.error("Logo yüklenirken hata:", err));

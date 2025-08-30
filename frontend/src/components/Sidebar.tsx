@@ -22,7 +22,7 @@ export default function TestimonialsCarousel() {
     const fetchTestimonials = async () => {
       try {
         // Pass language parameter to the API
-        const response = await fetch(`http://localhost:4000/api/logos?lang=${language}`);
+        const response = await fetch(`https://api.techsin.com.tr/api/logos?lang=${language}`);
         if (!response.ok) throw new Error("Failed to fetch testimonials");
 
         const data = await response.json();
@@ -94,7 +94,7 @@ export default function TestimonialsCarousel() {
       >
         <div className="flex flex-col items-center text-center space-y-6 px-4">
           <img
-            src={`http://localhost:4000${logoUrl}`}
+            src={`https://api.techsin.com.tr${logoUrl}`}
             alt={`${company} logo`}
             className="h-14 object-contain mb-3"
             loading="lazy"

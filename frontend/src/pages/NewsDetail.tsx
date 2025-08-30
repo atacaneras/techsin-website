@@ -68,7 +68,7 @@ export default function NewsDetail() {
     setOtherNews([]);
 
     fetch(
-      `http://localhost:4000/api/blog/${slug}?lang=${language.toLowerCase()}`,
+      `https://api.techsin.com.tr/api/blog/${slug}?lang=${language.toLowerCase()}`,
       { signal }
     )
       .then((res) => {
@@ -102,7 +102,7 @@ export default function NewsDetail() {
     const category = language === "TR" ? "haberler" : "news";
 
     fetch(
-      `http://localhost:4000/api/blog?category=${category}&lang=${language.toLowerCase()}`,
+      `https://api.techsin.com.tr/api/blog?category=${category}&lang=${language.toLowerCase()}`,
       { signal }
     )
       .then((res) => res.json())

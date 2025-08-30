@@ -41,7 +41,7 @@ export default function TechnicalSolutionDetail() {
         setPost(null);
         setError(null);
 
-        fetch(`http://localhost:4000/api/blog/${slug}?lang=${language.toLowerCase()}`, { signal })
+        fetch(`https://api.techsin.com.tr/api/blog/${slug}?lang=${language.toLowerCase()}`, { signal })
 
             .then(res => {
                 if (!res.ok) throw new Error("Technical solution not found");

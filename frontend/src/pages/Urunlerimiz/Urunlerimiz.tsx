@@ -69,7 +69,7 @@ export default function Products() {
     setLoading(true);
     const category = categoryMap[language];
 
-    fetch(`http://localhost:4000/api/blog?category=${category}`)
+    fetch(`https://api.techsin.com.tr/api/blog?category=${category}`)
       .then(res => res.json())
       .then(data => setPosts(Array.isArray(data) ? data : []))
       .catch(err => console.error(err))

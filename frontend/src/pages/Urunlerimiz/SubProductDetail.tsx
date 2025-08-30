@@ -57,7 +57,7 @@ export default function SubProductDetail() {
     setError(null);
 
     // Fetch the parent product using its slug, then find the sub-product
-    fetch(`http://localhost:4000/api/blog/${parentSlug}?lang=${language.toLowerCase()}`, { signal })
+    fetch(`https://api.techsin.com.tr/api/blog/${parentSlug}?lang=${language.toLowerCase()}`, { signal })
       .then(res => {
         if (!res.ok) throw new Error("Parent product not found");
         return res.json();

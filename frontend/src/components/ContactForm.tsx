@@ -38,7 +38,7 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:4000/api/contact", {
+      const response = await fetch("https://api.techsin.com.tr/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),

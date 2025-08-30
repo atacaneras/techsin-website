@@ -13,7 +13,7 @@ export default function Referanslar() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/references")
+    fetch("https://api.techsin.com.tr/api/references")
       .then((res) => res.json())
       .then((data) => {
         setLogos(data);

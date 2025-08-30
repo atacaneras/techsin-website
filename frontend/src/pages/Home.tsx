@@ -54,7 +54,7 @@ export default function Home() {
 
   const category = categoryMap[language]; // TR/EN
 
-  fetch(`http://localhost:4000/api/blog?category=${category}`)
+  fetch(`https://api.techsin.com.tr/api/blog?category=${category}`)
     .then(res => res.json())
     .then(data => {
       setApiServices(data);
@@ -118,7 +118,7 @@ export default function Home() {
   useEffect(() => {
     const fetchPartners = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/partners");
+        const response = await fetch("https://api.techsin.com.tr/api/partners");
         if (!response.ok) throw new Error("Failed to fetch partners");
 
         const data = await response.json();
@@ -197,7 +197,7 @@ export default function Home() {
 
   const handleMouseEnter = () => setIsPaused(true);
   const handleMouseLeave = () => setIsPaused(false);
-  
+
 const handleNewsClick = (slug: string) => {
   const basePath = language === "EN" ? "/en/news" : "/haberler";
   navigate(`${basePath}/${slug}`);
@@ -413,7 +413,7 @@ const handleNewsClick = (slug: string) => {
                           <img
                             src={partner.logoUrl.startsWith('http')
                               ? partner.logoUrl
-                              : `http://localhost:4000${partner.logoUrl}`
+                              : `https://api.techsin.com.tr${partner.logoUrl}`
                             }
                             alt={partner.name || `Partner ${index + 1}`}
                             className="max-h-8 sm:max-h-12 max-w-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-105"

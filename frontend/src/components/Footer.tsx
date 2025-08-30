@@ -105,7 +105,7 @@ export default function Footer() {
   }, []);
 
   useEffect(() => {
-    fetch("http://localhost:4000/api/blog/products/list")
+    fetch("https://api.techsin.com.tr/api/blog/products/list")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -116,7 +116,7 @@ export default function Footer() {
       })
       .catch(() => setProducts([]));
 
-    fetch("http://localhost:4000/api/blog/services/list")
+    fetch("https://api.techsin.com.tr/api/blog/services/list")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

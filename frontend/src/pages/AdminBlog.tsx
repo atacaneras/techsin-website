@@ -69,7 +69,7 @@ export default function AdminBlog() {
       const categoryKey =
         language === "en" ? categoryMap[activeCategory].en : categoryMap[activeCategory].tr;
 
-      const res = await fetch(`http://localhost:4000/api/blog?category=${categoryKey}`, {
+      const res = await fetch(`https://api.techsin.com.tr/api/blog?category=${categoryKey}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -102,7 +102,7 @@ export default function AdminBlog() {
     setLoading(true);
     setMessage("");
     try {
-      const response = await fetch("http://localhost:4000/api/auth/login", {
+      const response = await fetch("https://api.techsin.com.tr/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginForm),
@@ -141,7 +141,7 @@ export default function AdminBlog() {
     if (!token) return;
     if (!window.confirm("Are you sure you want to delete this content?")) return;
     try {
-      const res = await fetch(`http://localhost:4000/api/blog/${id}`, {
+      const res = await fetch(`https://api.techsin.com.tr/api/blog/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -167,8 +167,8 @@ export default function AdminBlog() {
     }
 
     const url = selectedBlog
-      ? `http://localhost:4000/api/blog/${selectedBlog._id}`
-      : `http://localhost:4000/api/blog/create`;
+      ? `https://api.techsin.com.tr/api/blog/${selectedBlog._id}`
+      : `https://api.techsin.com.tr/api/blog/create`;
     const method = selectedBlog ? "PUT" : "POST";
 
     try {

@@ -34,9 +34,9 @@ export default function Articles() {
     
     let endpoint;
     if (category === 'makaleler' || category === 'articles') {
-      endpoint = `http://localhost:4000/api/blog?category=${category}`;
+      endpoint = `https://api.techsin.com.tr/api/blog?category=${category}`;
     } else {
-      endpoint = `http://localhost:4000/api/blog?category=${category}`;
+      endpoint = `https://api.techsin.com.tr/api/blog?category=${category}`;
     }
     
     fetch(endpoint)

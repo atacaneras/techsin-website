@@ -5,7 +5,7 @@ import { connectDB } from "../config/db.js";
 
 dotenv.config();
 
-const BASE_API_URL = "http://localhost:4000";
+const BASE_API_URL = "https://api.techsin.com.tr";
 const AUTHOR_ID = "689effab8bfc2e922d776e39";
 
 const technicalSolutions = [

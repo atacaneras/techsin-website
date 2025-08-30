@@ -46,12 +46,12 @@ if (category) {
   }
 
   if (!blogObj.image) {
-    blogObj.image = `http://localhost:4000/logos/techsin.png`;
+    blogObj.image = `https://api.techsin.com.tr/logos/techsin.png`;
   } else if (!blogObj.image.startsWith("http")) {
     if (["urunlerimiz", "our-products"].includes(blogObj.category)) {
-      blogObj.image = `http://localhost:4000/products/${blogObj.image}`;
+      blogObj.image = `https://api.techsin.com.tr/products/${blogObj.image}`;
     } else {
-      blogObj.image = `http://localhost:4000/services/${blogObj.image}`;
+      blogObj.image = `https://api.techsin.com.tr/services/${blogObj.image}`;
     }
   }
 

@@ -99,7 +99,7 @@ app.use("/products", express.static(path.join(__dirname, "public/products")));
 app.use("/blog", express.static(path.join(__dirname, "public/blog")));
 
 // Logos and References
-const BASE_URL = `http://localhost:${port}`;
+const BASE_URL = `https://api.techsin.com.tr`;
 
 // Update your backend logos array to include both languages:
 const logos = [

@@ -37,9 +37,9 @@ export default function TechnicalSolutions() {
     if (category === 'teknik-cozumler' || category === 'technical-solutions') {
       // If you have a specific technical solutions endpoint, use it
       // Otherwise, try with a generic approach
-      endpoint = `http://localhost:4000/api/blog?category=${category}`;
+      endpoint = `https://api.techsin.com.tr/api/blog?category=${category}`;
     } else {
-      endpoint = `http://localhost:4000/api/blog?category=${category}`;
+      endpoint = `https://api.techsin.com.tr/api/blog?category=${category}`;
     }
     
     fetch(endpoint)
