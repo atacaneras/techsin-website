@@ -1,0 +1,337 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Enhanced Rich Text Editor Styles */
+.rich-text-editor-container {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.rich-text-editor .ql-container {
+  min-height: 300px;
+  font-size: 16px;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: #fefcfc;
+}
+
+.rich-text-editor .ql-snow.ql-toolbar {
+  display: block;
+  background: #eaecec;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+.rich-text-editor .ql-editor {
+  min-height: 300px;
+}
+
+/* Fix for image upload tooltip */
+.ql-tooltip {
+  z-index: 1000;
+}
+
+/* Fix for toolbar buttons */
+.ql-snow .ql-picker-label {
+  color: #444;
+}
+
+.ql-snow .ql-stroke {
+  stroke: #444;
+}
+
+.ql-snow .ql-fill {
+  fill: #444;
+}
+
+/* Image styles for editor content display */
+.ql-editor img,
+.rich-text-editor .ql-editor img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ql-editor img:hover,
+.rich-text-editor .ql-editor img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Positioned image classes */
+.ql-editor img.image-float-left,
+.rich-text-editor .ql-editor img.image-float-left {
+  float: left !important;
+  margin: 10px 15px 10px 0 !important;
+  clear: left !important;
+}
+
+.ql-editor img.image-float-right,
+.rich-text-editor .ql-editor img.image-float-right {
+  float: right !important;
+  margin: 10px 0 10px 15px !important;
+  clear: right !important;
+}
+
+.ql-editor img.image-center,
+.rich-text-editor .ql-editor img.image-center {
+  display: block !important;
+  margin: 15px auto !important;
+  clear: both !important;
+}
+
+.ql-editor img.image-inline,
+.rich-text-editor .ql-editor img.image-inline {
+  display: inline !important;
+  vertical-align: middle !important;
+  margin: 0 5px !important;
+}
+
+/* Clear floats after paragraphs */
+.ql-editor p:after,
+.rich-text-editor .ql-editor p:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Standard container styles */
+.ql-container {
+  min-height: 300px;
+  font-size: 16px;
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  background: #fefcfc;
+}
+
+.ql-toolbar {
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* News carousel improvements */
+.news-carousel-container {
+  scroll-behavior: smooth;
+}
+
+/* Prose styles for article content */
+.prose {
+  color: #374151;
+  max-width: none;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose img {
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Image alignment in rendered content */
+.prose img.image-float-left {
+  float: left;
+  margin: 10px 15px 10px 0;
+  clear: left;
+}
+
+.prose img.image-float-right {
+  float: right;
+  margin: 10px 0 10px 15px;
+  clear: right;
+}
+
+.prose img.image-center {
+  display: block;
+  margin: 15px auto;
+  clear: both;
+}
+
+.prose img.image-inline {
+  display: inline;
+  vertical-align: middle;
+  margin: 0 5px;
+}
+
+.prose a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.prose a:hover {
+  color: #1d4ed8;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+.prose ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+.prose blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  font-style: italic;
+  margin: 1.5rem 0;
+  color: #6b7280;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Hover effects for cards */
+.news-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Responsive images */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.news-grid {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.news-carousel-slide {
+  width: 100% !important;
+}
+
+.prose iframe,
+.prose video {
+  display: block !important;
+  margin: 1.5rem auto !important;
+  width: 640px !important;
+  height: 360px !important;
+  max-width: 100% !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.prose .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  margin: 1.5rem auto;
+}
+
+.prose .video-wrapper iframe,
+.prose .video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+
+@media (max-width: 768px) {
+
+  .prose iframe,
+  .prose video {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
